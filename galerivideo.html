@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri Foto | Teknologi Kami</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'trebuchet ms', 'lucida sans unicode', 'lucida grande', 'lucida sans', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p.description {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: center;
+    user-select: none;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    background:#2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    outline: none;
+}
+
+.card video {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+    user-select: none;
+    transition: transform 0.3s ease;
+    
+}
+
+.card:hover video,
+.card:focus-within video {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.25em 1.5em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.25em;
+    color: #ffffff;
+    margin: 0 0.5em 0;
+    user-select: none;
+}
+
+.card-desc {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 0;
+    user-select: none;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.75em;
+    }
+    p.description {
+        font-size: 1.125em;
+    }
+}
+
+a {
+    text-align: center;
+}
+
+iframe {
+    justify-content: center;
+}
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery iframe {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery iframe:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+   <header role="banner" class="header">
+        <div class="container header-container">
+            <a href="./index.html" class="brand" aria-label="My homepage">Zheetopia</a>
+            <nav role="navigation" aria-label="Primary navigation" class="nav"></nav>
+            <a href="./index.html" class="nav-link" tabindex="0">Home</a>
+            <a href="./news.html" class="nav-link" tabindex="0">News</a>
+            <a href="./galerifoto.html" class="nav-link" tabindex="0">Foto</a>
+            <a href="./galerivideo.html" class="nav-link" tabindex="0">Video</a>
+            <a href="./profile.html" class="nav-link" tabindex="0">About</a>
+            <a href="./contact.html" class="nav-link" tabindex="0">Contact</a>
+        </div>
+    </header>
+
+   <main class="container" role="main" aria-label="Galeri Foto">
+    <h1>Beberapa Dokumentasi Kegiatan Tentang Hewan Eksotik</h1>
+    <p class="description">Kumpulan dokumentasi pilihan yang menampilkan beberapa video terkait hewan eksotik di dunia. Klik pada video untuk melihat lebih jelas.</p>
+    <br>
+    <section class="gallery-grid">
+        <article class="card" tabindex="0" aria-label="Perburuan liar pada hewan eksotik di dunia">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jwUyqXwobMo?si=NHKkguFKUmwHBZyq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Perburuan liar pada hewan eksotik di dunia</h2></a>
+                <p class="card-desc">Pantai Kedu Warna, juga dikenal sebagai Pantai Tiga Warna, adalah sebuah pantai di Lampung Selatan yang terkenal dengan gradasi warna air lautnya yang unik. Pantai ini memiliki tiga warna dominan: biru, hijau, dan cokelat kemerahan, yang berasal dari perbedaan kedalaman air dan kondisi pantai.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YUWmhS7oI28?si=dkdAECaZU7tOGfnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Hewan eksotik di tanah papua Indonesia yang indah</h2></a>
+                <p class="card-desc">Air Terjun Putri Malu adalah sebuah air terjun yang terletak di Desa Juku Batu, Kecamatan Banjit, Kabupaten Way Kanan, Provinsi Lampung. Air terjun ini merupakan salah satu daya tarik wisata alam yang populer di Lampung, terkenal dengan keindahan alamnya yang masih alami dan aliran air yang deras.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8ys2JHox7mY?si=CMH1hffd8Jt_4qEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Harta megafauna di Indonesia</h2></a>
+                <p class="card-desc">Pulau Pahawang adalah sebuah pulau yang terletak di Kabupaten Pesawaran, Lampung. Pulau ini berjarak sekitar 190 km dari ibu kota Jakarta. Pulau Pahawang terkenal dengan tempat wisatanya dan menjadi pusat snorkeling.</p>
+            </div>
+        </article>
+    </section>
+
+    <br>
+    <br>
+
+    <section class="gallery-grid">
+        <article class="card" tabindex="0" aria-label="Perburuan liar pada hewan eksotik di dunia">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jwUyqXwobMo?si=NHKkguFKUmwHBZyq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Perburuan liar pada hewan eksotik di dunia</h2></a>
+                <p class="card-desc">Pantai Kedu Warna, juga dikenal sebagai Pantai Tiga Warna, adalah sebuah pantai di Lampung Selatan yang terkenal dengan gradasi warna air lautnya yang unik. Pantai ini memiliki tiga warna dominan: biru, hijau, dan cokelat kemerahan, yang berasal dari perbedaan kedalaman air dan kondisi pantai.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YUWmhS7oI28?si=dkdAECaZU7tOGfnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Hewan eksotik di tanah papua Indonesia yang indah</h2></a>
+                <p class="card-desc">Air Terjun Putri Malu adalah sebuah air terjun yang terletak di Desa Juku Batu, Kecamatan Banjit, Kabupaten Way Kanan, Provinsi Lampung. Air terjun ini merupakan salah satu daya tarik wisata alam yang populer di Lampung, terkenal dengan keindahan alamnya yang masih alami dan aliran air yang deras.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8ys2JHox7mY?si=CMH1hffd8Jt_4qEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Harta megafauna di Indonesia</h2></a>
+                <p class="card-desc">Pulau Pahawang adalah sebuah pulau yang terletak di Kabupaten Pesawaran, Lampung. Pulau ini berjarak sekitar 190 km dari ibu kota Jakarta. Pulau Pahawang terkenal dengan tempat wisatanya dan menjadi pusat snorkeling.</p>
+            </div>
+        </article>
+    </section>
+
+    <br>
+    <br>
+
+    <section class="gallery-grid">
+        <article class="card" tabindex="0" aria-label="Perburuan liar pada hewan eksotik di dunia">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jwUyqXwobMo?si=NHKkguFKUmwHBZyq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Perburuan liar pada hewan eksotik di dunia</h2></a>
+                <p class="card-desc">Pantai Kedu Warna, juga dikenal sebagai Pantai Tiga Warna, adalah sebuah pantai di Lampung Selatan yang terkenal dengan gradasi warna air lautnya yang unik. Pantai ini memiliki tiga warna dominan: biru, hijau, dan cokelat kemerahan, yang berasal dari perbedaan kedalaman air dan kondisi pantai.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YUWmhS7oI28?si=dkdAECaZU7tOGfnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Hewan eksotik di tanah papua Indonesia yang indah</h2></a>
+                <p class="card-desc">Air Terjun Putri Malu adalah sebuah air terjun yang terletak di Desa Juku Batu, Kecamatan Banjit, Kabupaten Way Kanan, Provinsi Lampung. Air terjun ini merupakan salah satu daya tarik wisata alam yang populer di Lampung, terkenal dengan keindahan alamnya yang masih alami dan aliran air yang deras.</p>
+            </div>
+        </article>
+        <article class="card" tabindex="0" aria-label="Pantai dengan putih bersih dan air jernih">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8ys2JHox7mY?si=CMH1hffd8Jt_4qEO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="card-body">
+                <a href="https://indonesiakaya.com/pustaka-indonesia/berakhir-pekan-di-pantai-pasir-putih-lampung/"><h2 class="card-title">Harta megafauna di Indonesia</h2></a>
+                <p class="card-desc">Pulau Pahawang adalah sebuah pulau yang terletak di Kabupaten Pesawaran, Lampung. Pulau ini berjarak sekitar 190 km dari ibu kota Jakarta. Pulau Pahawang terkenal dengan tempat wisatanya dan menjadi pusat snorkeling.</p>
+            </div>
+        </article>
+    </section>
+    </main>
+
+  <footer>
+    &copy; 2025 Teknologi Kami. Semua Hak Dilindungi.
+  </footer>
+
+</body>
+</html>
